@@ -10,7 +10,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --breakpoint-xs: 375px;
 }
+
+@custom-media --xs (min-width: 375px);
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -27,4 +31,17 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Responsive utilities */
+@media (max-width: 374px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal scroll */
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
 }

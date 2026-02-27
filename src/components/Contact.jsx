@@ -32,8 +32,8 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="bg-black text-white py-16 sm:py-20 md:py-28 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 sm:gap-16 md:gap-20">
+    <section id="contact" className="bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
 
         {/* LEFT SIDE */}
         <motion.div

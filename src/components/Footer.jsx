@@ -12,8 +12,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-black text-white pt-16 sm:pt-20 pb-8 sm:pb-10 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-10 sm:gap-12">
+    <footer className="bg-black text-white pt-12 sm:pt-16 md:pt-20 pb-6 sm:pb-8 md:pb-10 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
         {/* LEFT */}
         <div>
@@ -98,7 +98,7 @@ export default function Footer() {
       </div>
 
       {/* bottom line */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs sm:text-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10 sm:mt-12 md:mt-16 pt-6 sm:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs sm:text-sm gap-3">
 
         <p>© 2026 Papan Namasudra. All rights reserved.</p>
 

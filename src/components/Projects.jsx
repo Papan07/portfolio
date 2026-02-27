@@ -38,15 +38,15 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-black text-white py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+    <section id="projects" className="bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-16 sm:mb-20 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 md:mb-20 text-center">
           My <span className="text-cyan-400">Projects</span>
         </h2>
 
-        <div className="space-y-20 sm:space-y-24 md:space-y-32">
+        <div className="space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-32">
 
           {projects.map((project, i) => (
   <motion.div
@@ -63,14 +63,14 @@ export default function Projects() {
       href={project.live}
       target="_blank"
       rel="noopener noreferrer"
-      className={`relative group cursor-pointer ${
+      className={`relative group cursor-pointer overflow-hidden rounded-xl ${
         i % 2 !== 0 ? "md:order-2" : "md:order-1"
       }`}
     >
       <img
         src={project.image}
         alt={project.title}
-        className="rounded-xl border border-white/10 shadow-lg group-hover:scale-105 transition duration-500"
+        className="w-full h-auto rounded-xl border border-white/10 shadow-lg group-hover:scale-105 transition duration-500"
       />
     </a>
 

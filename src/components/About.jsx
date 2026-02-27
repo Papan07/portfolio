@@ -7,12 +7,12 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-black text-white flex items-center py-16 sm:py-20 px-4 sm:px-6"
+      className="min-h-screen bg-black text-white flex items-center py-12 sm:py-16 md:py-20 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto w-full">
 
         {/* Section Title */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             About <span className="text-cyan-400">Me</span>
           </h2>

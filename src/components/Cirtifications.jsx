@@ -58,7 +58,7 @@ export default function Certifications() {
 
   return (
     <>
-    <section id="certifications" className="bg-black text-white py-16 sm:py-20 md:py-28 px-4 sm:px-6">
+    <section id="certifications" className="bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Title */}
@@ -66,7 +66,7 @@ export default function Certifications() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 sm:mb-6 md:mb-8"
         >
           My <span className="text-cyan-400">Certifications</span>
         </motion.h2>
@@ -76,7 +76,7 @@ export default function Certifications() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-300 text-center max-w-4xl mx-auto mb-16 sm:mb-20 leading-relaxed text-sm sm:text-base"
+          className="text-gray-300 text-center max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20 leading-relaxed text-sm sm:text-base"
         >
           I believe continuous learning and practical exposure are essential for becoming a strong software engineer. Through industry-recognized certifications, bootcamps, and hackathons, I have built a solid foundation in full-stack development, design thinking, and artificial intelligence.
           <br /><br />

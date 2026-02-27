@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Experience() {
   const [showOfferLetter, setShowOfferLetter] = useState(false);
   return (
-    <section id="experience" className="bg-black text-white pt-20 sm:pt-24 md:pt-32 pb-16 sm:pb-20 md:pb-28 px-4 sm:px-6 min-h-screen">
+    <section id="experience" className="bg-black text-white pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Title */}
@@ -16,7 +16,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16 sm:mb-20"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 sm:mb-16 md:mb-20"
         >
           Experience & <span className="text-cyan-400">Growth</span>
         </motion.h2>

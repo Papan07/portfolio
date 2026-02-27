@@ -11,8 +11,8 @@ export default function Hero() {
     >
       {/* Background Image */}
       <motion.div
-        className="absolute inset-0 bg-cover bg-center md:bg-right brightness-90 contrast-110"
-        style={{ backgroundImage: "url('photo1.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center brightness-90 contrast-110"
+        style={{ backgroundImage: "url('photo1.jpg')", backgroundPosition: 'center 30%' }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -27,7 +27,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif tracking-wide text-gray-100 leading-tight"
+            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif tracking-wide text-gray-100 leading-tight"
             >
             Papan Namasudra
             </motion.h1>
@@ -36,7 +36,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="mt-4 sm:mt-6 text-lg sm:text-xl text-gray-200"
+            className="mt-4 sm:mt-6 text-base xs:text-lg sm:text-xl text-gray-200"
             >
             Full-Stack | MERN Stack | UI/UX Developer | AI Enthusiast
             </motion.p>
