@@ -10,9 +10,11 @@ export default function Hero() {
       className="relative min-h-screen flex items-center bg-black text-white overflow-hidden"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center md:bg-right brightness-75"
-        style={{ backgroundImage: "url('its_me.png')" }}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center md:bg-right brightness-90 contrast-110"
+        style={{ backgroundImage: "url('photo1.jpg')" }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
 
       {/* Teal + Dark Gradient Overlay */}
