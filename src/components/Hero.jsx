@@ -9,10 +9,18 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center bg-black text-white overflow-hidden"
     >
-      {/* Background Image */}
+      {/* Background Image - Desktop */}
       <motion.div
-        className="absolute inset-0 bg-cover bg-center brightness-90 contrast-110"
+        className="hidden sm:block absolute inset-0 bg-cover bg-center brightness-90 contrast-110"
         style={{ backgroundImage: "url('photo1.jpg')", backgroundPosition: 'center 30%' }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Background Image - Mobile */}
+      <motion.div
+        className="sm:hidden absolute inset-0 bg-cover bg-center brightness-90 contrast-110"
+        style={{ backgroundImage: "url('photo4.jpeg')" }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />

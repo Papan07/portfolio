@@ -79,8 +79,8 @@ export default function Footer() {
 
           <div className="space-y-3 sm:space-y-4 text-gray-400 text-sm sm:text-base">
             <p>
-              <span className="text-white">Web Development Intern</span><br/>
-              Syntecxhub
+              <span className="text-white">Exploring Machine Learning</span><br/>
+              Implementing Automation in webpage
             </p>
 
             <p>
