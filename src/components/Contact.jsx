@@ -16,7 +16,7 @@ export default function Contact() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        access_key: "20c29257-3670-4822-8289-c9824bd156eb",
+        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
         name: formData.name,
         email: formData.email,
         message: formData.message,
