@@ -35,7 +35,13 @@ export default function Navbar() {
     setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const navbarHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navbarHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
     setTimeout(() => setIsScrolling(false), 1000);
   };
@@ -106,46 +112,39 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10"
-          >
-            <ul className="flex flex-col px-4 py-6 space-y-4">
-              {["Home", "About", "Skills", "Projects", "Certifications", "Experience", "Contact"].map((label, index) => {
-                const href = `#${label.toLowerCase()}`;
-                const isActive = activeLink === href;
-                return (
-                  <li key={index}>
-                    <a
-                      href={href}
-                      onClick={(e) => handleNavClick(e, href)}
-                      className={`block py-2 text-lg transition ${
-                        isActive ? "text-cyan-400" : "text-gray-300"
-                      }`}
-                    >
-                      {label}
-                    </a>
-                  </li>
-                );
-              })}
-              <li className="pt-4">
-                <a
-                  href="/Papan_Namasudra_resume.pdf"
-                  download
-                  className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium"
-                >
-                  <Download size={18} />
-                  Download Resume
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-black/95 backdrop-blur-lg border-t border-white/10">
+          <ul className="flex flex-col px-4 py-6 space-y-4">
+            {["Home", "About", "Skills", "Projects", "Certifications", "Experience", "Contact"].map((label, index) => {
+              const href = `#${label.toLowerCase()}`;
+              const isActive = activeLink === href;
+              return (
+                <li key={index}>
+                  <a
+                    href={href}
+                    onClick={(e) => handleNavClick(e, href)}
+                    className={`block py-3 px-2 text-lg transition active:bg-cyan-500/10 ${
+                      isActive ? "text-cyan-400" : "text-gray-300"
+                    }`}
+                  >
+                    {label}
+                  </a>
+                </li>
+              );
+            })}
+            <li className="pt-4">
+              <a
+                href="/Papan_Namasudra_resume.pdf"
+                download
+                className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
